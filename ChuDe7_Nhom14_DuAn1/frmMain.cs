@@ -19,10 +19,25 @@ namespace ChuDe7_Nhom14_DuAn1
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.KTraKetNoi();
+            mnuQuanLy.Enabled = false;
+            mnuDangXuat.Enabled = false;
+            mnuDoiMK.Enabled = false;
+            frmDangNhap form = new frmDangNhap(this);
+            form.ShowDialog();
+        }
+
+        private void mnuDangNhap_Click(object sender, EventArgs e) {
+            frmDangNhap form = new frmDangNhap(this);
+            form.ShowDialog();
+        }
+
+        private void mnuThoat_Click(object sender, EventArgs e) {
+            Application.Exit();
         }
 
         //Phần này để fix bug
+
+        //Gọi hàm này để kiểm tra kết nối
         private void KTraKetNoi() {
             try
             {

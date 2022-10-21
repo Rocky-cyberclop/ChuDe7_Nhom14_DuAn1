@@ -7,3 +7,4 @@ D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\
 D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.csproj.GenerateResource.Cache
 D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.exe
 D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.pdb
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmDangNhap.resources

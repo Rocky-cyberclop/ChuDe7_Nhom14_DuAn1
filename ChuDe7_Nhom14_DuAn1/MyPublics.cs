@@ -11,7 +11,7 @@ namespace ChuDe7_Nhom14_DuAn1
     public static class MyPublics
     {
         public static SqlConnection conMyConnection;
-        public static string strMSSV, strLop, strQuyenSD, strHK, strNK;
+        public static string strMS, strSTT, strQuyenSD, strHoTen;
 
 
         //Trước khi xài hàm này phải tạo tài khoản TN207User trong sql server studio management
