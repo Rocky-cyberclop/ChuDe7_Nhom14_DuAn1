@@ -1,0 +1,9 @@
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\bin\Debug\ChuDe7_Nhom14_DuAn1.exe.config
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\bin\Debug\ChuDe7_Nhom14_DuAn1.exe
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\bin\Debug\ChuDe7_Nhom14_DuAn1.pdb
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.csprojResolveAssemblyReference.cache
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmMain.resources
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.Properties.Resources.resources
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.csproj.GenerateResource.Cache
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.exe
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.pdb
