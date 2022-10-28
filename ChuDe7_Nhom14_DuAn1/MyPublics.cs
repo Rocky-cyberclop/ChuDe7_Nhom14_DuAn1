@@ -47,7 +47,7 @@ namespace ChuDe7_Nhom14_DuAn1
 
         }
 
-        public static void OpenDataArgs(string strSelect, DataTable dataTB)
+        public static void OpenData(string strSelect, DataTable dataTB)
         {
 
             try
@@ -68,7 +68,7 @@ namespace ChuDe7_Nhom14_DuAn1
             }
         }
 
-        public static void OpenData(string strSelect, DataTable dataTB, SqlDataAdapter daAdapter) {
+        public static void OpenDataArgs(string strSelect, DataTable dataTB, SqlDataAdapter daAdapter) {
 
             try
             {

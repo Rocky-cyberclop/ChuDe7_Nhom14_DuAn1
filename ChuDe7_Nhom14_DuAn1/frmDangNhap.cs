@@ -67,7 +67,6 @@ namespace ChuDe7_Nhom14_DuAn1
                         fMain.mnuDangXuat.Enabled = true;
                         fMain.mnuDangNhap.Enabled = false;
                         fMain.mnuDoiMK.Enabled = true;
-                        MessageBox.Show(MyPublics.strMS+" "+MyPublics.strSTT,"Thông báo");
                         MessageBox.Show(MyPublics.strHoTen.ToString()+" "+MyPublics.strQuyenSD.ToString(), "Thông báo");
                         MyPublics.conMyConnection.Close();
                         this.Close();

@@ -8,3 +8,6 @@ D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\
 D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.exe
 D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.pdb
 D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmDangNhap.resources
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmHamlet.resources
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmFamilies.resources
+D:\For store\DotNet\VSProject\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmChangePass.resources
