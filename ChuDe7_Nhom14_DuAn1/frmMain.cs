@@ -83,5 +83,17 @@ namespace ChuDe7_Nhom14_DuAn1
 
             }
         }
+
+        private void thànhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThanhVien fThanhVien = new frmThanhVien();
+            fThanhVien.ShowDialog();
+        }
+
+        private void mnuNgheNghiep_Click(object sender, EventArgs e)
+        {
+            frmNgheNghiep fNgheNghiep = new frmNgheNghiep();
+            fNgheNghiep.ShowDialog();
+        }
     }
 }

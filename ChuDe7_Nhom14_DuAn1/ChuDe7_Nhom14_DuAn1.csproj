@@ -75,6 +75,18 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNgheNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNgheNghiep.Designer.cs">
+      <DependentUpon>frmNgheNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhVien.Designer.cs">
+      <DependentUpon>frmThanhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyPublics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNgheNghiep.resx">
+      <DependentUpon>frmNgheNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanhVien.resx">
+      <DependentUpon>frmThanhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,6 +136,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\thumb-1920-284514.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hopthu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giadinh_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giadinh_background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tulip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khomap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khomap_auto_x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cayco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bautroi1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

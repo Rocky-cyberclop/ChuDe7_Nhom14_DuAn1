@@ -168,12 +168,12 @@ namespace ChuDe7_Nhom14_DuAn1
             txtId.MaxLength = 8;
             txtName.MaxLength = 40;
             this.GanDuLieu();
-            dgvHamlet.Width = 460;
-            dgvHamlet.Columns[0].Width = 80;
+            dgvHamlet.Width = 470;
+            dgvHamlet.Columns[0].Width = 78;
             dgvHamlet.Columns[0].HeaderText = "Mã ấp";
             dgvHamlet.Columns[1].Width = 120;
             dgvHamlet.Columns[1].HeaderText = "Tên ấp";
-            dgvHamlet.Columns[2].Width = 80;
+            dgvHamlet.Columns[2].Width = 78;
             dgvHamlet.Columns[2].HeaderText = "Số tổ";
             dgvHamlet.Columns[3].Width = 120;
             dgvHamlet.Columns[3].HeaderText = "Đặc điểm";
@@ -187,6 +187,6 @@ namespace ChuDe7_Nhom14_DuAn1
             this.Close();
         }
 
-        
+
     }
 }

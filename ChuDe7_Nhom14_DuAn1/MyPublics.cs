@@ -18,6 +18,7 @@ namespace ChuDe7_Nhom14_DuAn1
         //phải có CSDL QL_HoGiaDinh đã được restore và đã cấp quyền sở hữu cho CSDL
         //Tham số server truyền vào là tên server trên máy tính của bạn
         public static void ConnectDatabase(string server) {
+            server = "localhost";
             string strCon = "Server="+server+
                 "; Database=QL_HoGiaDinh; Integrated Security = false; UID = TN207User; PWD = TN207User";
             Console.WriteLine(strCon);
