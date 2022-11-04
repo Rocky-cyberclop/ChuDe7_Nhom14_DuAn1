@@ -27,3 +27,6 @@ D:\HK1 2022-2023\TN207\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_
 D:\HK1 2022-2023\TN207\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.pdb
 D:\HK1 2022-2023\TN207\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmThanhVien.resources
 D:\HK1 2022-2023\TN207\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmNgheNghiep.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\bin\Debug\ChuDe7_Nhom14_DuAn1.exe.config
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.exe
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.pdb

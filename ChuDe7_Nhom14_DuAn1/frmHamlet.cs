@@ -15,8 +15,6 @@ namespace ChuDe7_Nhom14_DuAn1
     public partial class frmHamlet : Form
     {
         DataTable dtHamlet = new DataTable("KhomAp");
-        SqlDataAdapter daHamlet = new SqlDataAdapter();
-        BindingSource bsHamlet = new BindingSource();
         bool blnAdd = false;
 
         void DieuKhienBinhThuong() {
@@ -76,14 +74,43 @@ namespace ChuDe7_Nhom14_DuAn1
 
         private void btnThem_Click(object sender, EventArgs e) {
             this.blnAdd = true;
-            this.bsHamlet.AddNew();
-            this.bsHamlet.Position = this.bsHamlet.Count;
-            dgvHamlet.CurrentCell = dgvHamlet[0, this.bsHamlet.Count - 1];
             this.DieuKhienThem();
         }
 
         private void btnSua_Click(object sender, EventArgs e) {
             this.DieuKhienChinhSua();
+        }
+
+        private void ThucThiLuu() {
+            string sql;
+            if (this.blnAdd == true)
+            {
+                sql = "insert into KhomAp values(@MaAp,@TenAp,@SoTo,@DacDiem)";
+                this.dtHamlet.Rows.Add(data[0], data[1], data[2], data[3]);
+                this.GanDuLieu();
+                this.blnAdd = false;
+            }
+            else
+            {
+                string[] fieldsData = new string[3];
+                fieldsData[0] = "TenAp";
+                fieldsData[1] = "SoTo";
+                fieldsData[2] = "DacDiem";
+                string[] data = new string[3];
+                data[0] = txtName.Text;
+                data[1] = txtGroup.Text;
+                data[2] = txtDescribe.Text;
+                string[] fieldsPlace = new string[1];
+                fieldsPlace[0] = "MaAp";
+                string[] place = new string[1];
+                place[0] = txtId.Text;
+                dc.UpdateData(fieldsData, data, fieldsPlace, place, "KhomAp");
+                int curRow = dgvHamlet.CurrentRow.Index;
+                this.dtHamlet.Rows[curRow][0] = txtId.Text;
+                this.dtHamlet.Rows[curRow][1] = txtName.Text;
+                this.dtHamlet.Rows[curRow][2] = txtGroup.Text;
+                this.dtHamlet.Rows[curRow][3] = txtDescribe.Text;
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e) {
@@ -111,17 +138,14 @@ namespace ChuDe7_Nhom14_DuAn1
                 txtId.Focus();
             }
             else {
-                this.bsHamlet.EndEdit();
-                this.daHamlet.Update(this.dtHamlet);
-                this.dtHamlet.AcceptChanges();
+                
                 this.blnAdd = false;
                 this.DieuKhienBinhThuong();
             }
         }
 
         private void btnKhongLuu_Click(object sender, EventArgs e) {
-            this.bsHamlet.EndEdit();
-            this.dtHamlet.RejectChanges();
+            
             this.blnAdd = false;
             this.DieuKhienBinhThuong();
         }
@@ -135,8 +159,7 @@ namespace ChuDe7_Nhom14_DuAn1
                 DialogResult dlDongY;
                 dlDongY = MessageBox.Show("Bạn thật sự muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo);
                 if (dlDongY == DialogResult.Yes) {
-                    this.bsHamlet.RemoveCurrent();
-                    this.daHamlet.Update(this.dtHamlet);
+                    
                     this.dtHamlet.AcceptChanges();
                 }
             }
@@ -144,14 +167,10 @@ namespace ChuDe7_Nhom14_DuAn1
         }
 
         private void dgvLop_CellClick(object sender, DataGridViewCellEventArgs e) {
-            this.bsHamlet.Position = dgvHamlet.CurrentRow.Index;
         }
 
         private void GanDuLieu() {
-            txtId.DataBindings.Add(new Binding("Text", this.bsHamlet, "MaAp"));
-            txtName.DataBindings.Add(new Binding("Text", this.bsHamlet, "TenAp"));
-            txGroup.DataBindings.Add(new Binding("Text", this.bsHamlet, "SoTo"));
-            txtDescribe.DataBindings.Add(new Binding("Text", this.bsHamlet, "DacDiem"));
+            
         }
 
         public frmHamlet()
@@ -162,9 +181,8 @@ namespace ChuDe7_Nhom14_DuAn1
         private void frmLop_Load(object sender, EventArgs e)
         {
             string sqlSelect = "select * from KhomAp";
-            MyPublics.OpenDataArgs(sqlSelect, this.dtHamlet,this.daHamlet);
+            MyPublics.OpenData(sqlSelect, this.dtHamlet);
             dgvHamlet.DataSource = this.dtHamlet;
-            this.bsHamlet.DataSource = this.dtHamlet;
             txtId.MaxLength = 8;
             txtName.MaxLength = 40;
             this.GanDuLieu();

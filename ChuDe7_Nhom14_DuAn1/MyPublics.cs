@@ -69,22 +69,7 @@ namespace ChuDe7_Nhom14_DuAn1
             }
         }
 
-        public static void OpenDataArgs(string strSelect, DataTable dataTB, SqlDataAdapter daAdapter) {
-
-            try
-            {
-                if (conMyConnection.State == ConnectionState.Closed) {
-                    conMyConnection.Open();
-                }
-                daAdapter.SelectCommand = new SqlCommand(strSelect, conMyConnection);
-                SqlCommandBuilder cmb = new SqlCommandBuilder(daAdapter);
-                daAdapter.Fill(dataTB);
-                conMyConnection.Close();
-            }
-            catch (Exception) { 
-            
-            }
-        }
+        
 
         public static bool TonTaiKhoaChinh(string strGiaTri, string strTenTruong, string strTable) {
             bool res = false;
