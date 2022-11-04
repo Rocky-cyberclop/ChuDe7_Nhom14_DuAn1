@@ -18,7 +18,7 @@ namespace ChuDe7_Nhom14_DuAn1
         //phải có CSDL QL_HoGiaDinh đã được restore và đã cấp quyền sở hữu cho CSDL
         //Tham số server truyền vào là tên server trên máy tính của bạn
         public static void ConnectDatabase(string server) {
-            server = "localhost";
+            server = "ROCKYOPERATION";
             string strCon = "Server="+server+
                 "; Database=QL_HoGiaDinh; Integrated Security = false; UID = TN207User; PWD = TN207User";
             Console.WriteLine(strCon);
@@ -96,6 +96,36 @@ namespace ChuDe7_Nhom14_DuAn1
             return res;
         }
 
+        public static bool TonTaiKhoaChinh(string strGiaTri1, string strTenTruong1,
+            string strGiaTri2, string strTenTruong2, string strTable) {
+                bool res = false;
+                try
+                {
+                    string sqlSelect = "select 1 from " + strTable + " where " + strTenTruong1 + "='" + strGiaTri1 + "'" +
+                                                                        " and " + strTenTruong2 + "='" + strGiaTri2 + "'";
+                    if (conMyConnection.State == ConnectionState.Closed)
+                    {
+                        conMyConnection.Open();
+                    }
+                    Console.WriteLine("hi");
+
+                    SqlCommand cmd = new SqlCommand(sqlSelect, conMyConnection);
+                    SqlDataReader drReader = cmd.ExecuteReader();
+                    if (drReader.HasRows)
+                    {
+                        res = true;
+                    }
+                    drReader.Close();
+                    conMyConnection.Close();
+
+                }
+                catch (Exception)
+                {
+
+                }
+
+                return res;
+        }
 
     }
 }

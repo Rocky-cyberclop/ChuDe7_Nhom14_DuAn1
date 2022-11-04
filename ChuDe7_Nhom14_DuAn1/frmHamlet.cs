@@ -11,7 +11,6 @@ using System.Data.SqlClient;
 
 namespace ChuDe7_Nhom14_DuAn1
 {
-    //This class use binding source
     public partial class frmHamlet : Form
     {
         DataTable dtHamlet = new DataTable("KhomAp");
@@ -33,7 +32,7 @@ namespace ChuDe7_Nhom14_DuAn1
             btnKhongLuu.Enabled = false;
             txtId.ReadOnly = true;
             txtName.ReadOnly = true;
-            txGroup.ReadOnly = true;
+            txtGroup.ReadOnly = true;
             txtDescribe.ReadOnly = true;
             btnClose.Enabled = true;
             dgvHamlet.Enabled = true;
@@ -48,11 +47,11 @@ namespace ChuDe7_Nhom14_DuAn1
             btnClose.Enabled = false;
             txtId.ReadOnly = false;
             txtName.ReadOnly = false;
-            txGroup.ReadOnly = false;
+            txtGroup.ReadOnly = false;
             txtDescribe.ReadOnly = false;
             txtId.Clear();
             txtName.Clear();
-            txGroup.Clear();
+            txtGroup.Clear();
             txtDescribe.Clear();
             txtId.Focus();
             dgvHamlet.Enabled = false;
@@ -66,7 +65,7 @@ namespace ChuDe7_Nhom14_DuAn1
             btnXoa.Enabled = false;
             btnClose.Enabled = false;
             txtName.ReadOnly = false;
-            txGroup.ReadOnly = false;
+            txtGroup.ReadOnly = false;
             txtDescribe.ReadOnly = false;
             txtName.Focus();
             dgvHamlet.Enabled = false;
@@ -86,31 +85,36 @@ namespace ChuDe7_Nhom14_DuAn1
             if (this.blnAdd == true)
             {
                 sql = "insert into KhomAp values(@MaAp,@TenAp,@SoTo,@DacDiem)";
-                this.dtHamlet.Rows.Add(data[0], data[1], data[2], data[3]);
-                this.GanDuLieu();
-                this.blnAdd = false;
             }
             else
             {
-                string[] fieldsData = new string[3];
-                fieldsData[0] = "TenAp";
-                fieldsData[1] = "SoTo";
-                fieldsData[2] = "DacDiem";
-                string[] data = new string[3];
-                data[0] = txtName.Text;
-                data[1] = txtGroup.Text;
-                data[2] = txtDescribe.Text;
-                string[] fieldsPlace = new string[1];
-                fieldsPlace[0] = "MaAp";
-                string[] place = new string[1];
-                place[0] = txtId.Text;
-                dc.UpdateData(fieldsData, data, fieldsPlace, place, "KhomAp");
+                sql = "update KhomAp set TenAp=@TenAp,SoTo=@SoTo,DacDiem=@DacDiem where MaAp=@MaAp ";
+            }
+            if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+            {
+                MyPublics.conMyConnection.Open();
+            }
+            SqlCommand sqlCmd = new SqlCommand(sql, MyPublics.conMyConnection);
+            sqlCmd.Parameters.AddWithValue("@MaAp", txtId.Text);
+            sqlCmd.Parameters.AddWithValue("@TenAp", txtName.Text);
+            sqlCmd.Parameters.AddWithValue("@SoTo", txtGroup.Text);
+            sqlCmd.Parameters.AddWithValue("@DacDiem", txtDescribe.Text);
+            sqlCmd.ExecuteNonQuery();
+            MyPublics.conMyConnection.Close();
+            if (this.blnAdd == true)
+            {
+                this.dtHamlet.Rows.Add(txtId.Text, txtName.Text, txtGroup.Text, txtDescribe.Text);
+                this.blnAdd = false;
+            }
+            else {
                 int curRow = dgvHamlet.CurrentRow.Index;
                 this.dtHamlet.Rows[curRow][0] = txtId.Text;
                 this.dtHamlet.Rows[curRow][1] = txtName.Text;
                 this.dtHamlet.Rows[curRow][2] = txtGroup.Text;
                 this.dtHamlet.Rows[curRow][3] = txtDescribe.Text;
             }
+            this.GanDuLieu();
+            this.DieuKhienBinhThuong();
         }
 
         private void btnLuu_Click(object sender, EventArgs e) {
@@ -126,9 +130,9 @@ namespace ChuDe7_Nhom14_DuAn1
                 txtName.Focus();
                 return;
             }
-            if ((!int.TryParse(txGroup.Text, out group)) || group <= 0) {
+            if ((!int.TryParse(txtGroup.Text, out group)) || group <= 0) {
                 MessageBox.Show("Lỗi nhập số tổ!");
-                txGroup.Focus();
+                txtGroup.Focus();
                 return;
             }
             if ((blnAdd)&&MyPublics.TonTaiKhoaChinh(txtId.Text,"MaAp","KhomAp"))
@@ -138,14 +142,12 @@ namespace ChuDe7_Nhom14_DuAn1
                 txtId.Focus();
             }
             else {
-                
-                this.blnAdd = false;
-                this.DieuKhienBinhThuong();
+                this.ThucThiLuu();
             }
         }
 
         private void btnKhongLuu_Click(object sender, EventArgs e) {
-            
+            this.GanDuLieu();
             this.blnAdd = false;
             this.DieuKhienBinhThuong();
         }
@@ -159,18 +161,45 @@ namespace ChuDe7_Nhom14_DuAn1
                 DialogResult dlDongY;
                 dlDongY = MessageBox.Show("Bạn thật sự muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo);
                 if (dlDongY == DialogResult.Yes) {
-                    
-                    this.dtHamlet.AcceptChanges();
+                    string sqlDel = "delete KhomAp where MaAp=@MaAp";
+                    if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+                    {
+                        MyPublics.conMyConnection.Open();
+                    }
+                    SqlCommand cmd = new SqlCommand(sqlDel, MyPublics.conMyConnection);
+                    cmd.Parameters.AddWithValue("@MaAp", txtId.Text);
+                    cmd.ExecuteNonQuery();
+                    MyPublics.conMyConnection.Close();
+                    int curRow = dgvHamlet.CurrentRow.Index;
+                    this.dtHamlet.Rows.RemoveAt(curRow);
+                    this.GanDuLieu();
                 }
             }
             this.DieuKhienBinhThuong();
         }
 
         private void dgvLop_CellClick(object sender, DataGridViewCellEventArgs e) {
+            this.GanDuLieu();
         }
 
         private void GanDuLieu() {
-            
+            if (this.dtHamlet.Rows.Count > 0)
+            {
+                int curRow = dgvHamlet.CurrentRow.Index;
+                txtId.Text = dgvHamlet[0, curRow].Value.ToString();
+                txtName.Text = dgvHamlet[1, curRow].Value.ToString();
+                txtGroup.Text = dgvHamlet[2, curRow].Value.ToString();
+                txtDescribe.Text = dgvHamlet[3, curRow].Value.ToString();
+            }
+            else
+            {
+                txtId.Clear();
+                txtName.Clear();
+                txtGroup.Clear();
+                txtDescribe.Clear();
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+            }
         }
 
         public frmHamlet()

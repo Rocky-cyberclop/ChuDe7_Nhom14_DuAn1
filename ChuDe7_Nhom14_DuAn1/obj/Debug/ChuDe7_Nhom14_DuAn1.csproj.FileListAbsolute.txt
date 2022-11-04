@@ -30,3 +30,15 @@ D:\HK1 2022-2023\TN207\ChuDe7_Nhom14_DuAn1\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_
 C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\bin\Debug\ChuDe7_Nhom14_DuAn1.exe.config
 C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.exe
 C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.pdb
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\bin\Debug\ChuDe7_Nhom14_DuAn1.exe
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\bin\Debug\ChuDe7_Nhom14_DuAn1.pdb
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.csprojResolveAssemblyReference.cache
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmChangePass.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmDangNhap.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmFamilies.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmHamlet.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmMain.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmNgheNghiep.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.frmThanhVien.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.Properties.Resources.resources
+C:\Users\Tran\Desktop\dotnetplan\ChuDe7_Nhom14_DuAn1\obj\Debug\ChuDe7_Nhom14_DuAn1.csproj.GenerateResource.Cache
